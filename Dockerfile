@@ -8,4 +8,4 @@ COPY . .
 EXPOSE 5010
 
 #comando para iniciar a aplicação
-CMD ["python", "aplication.py"]
+CMD ["python", "application.py"]
