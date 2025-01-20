@@ -72,3 +72,44 @@ Você será desclassifiado nas seguintes situações:
 1. Se submeter um solução que não funcione; 
 2. Se não cumprir os critérios presentes no seção **Avaliação**;
 3. Se cometer plágio.
+
+## Documentação da solução
+
+### Descrição
+Aplicação em **Flask** que permite via API:
+1. Buscar concursos públicos compatíveis com as profissões de um candidato (CPF).
+2. Listar candidatos compatíveis com as vagas de um concurso (Código do Concurso).
+
+---
+
+### Estrutura (Código de conversão incluido)
+- **Dados**: Arquivos CSV (`candidatos_formatado.csv`, `concursos_formatado.csv`).
+- **Principais Funcionalidades**:
+  - **`/concursos/<cpf>`**: Retorna concursos compatíveis com o CPF.
+  - **`/candidatos/<codigo>`**: Retorna candidatos compatíveis com o código do concurso.
+- **Servidor**: Utiliza **Waitress**.
+
+---
+
+### Execução
+1. No Docker execute: `docker-compose up -d`.
+2. Consultas:
+   - Concursos: `http://localhost:5010/concursos/182.845.084-34`.
+   - Candidatos: `http://localhost:5010/candidatos/61828450843`.
+
+---
+
+### Diferenciais
+- Código organizado e legível.
+- Tratamento de erros para entradas inválidas.
+- Estrutura extensível para uso com banco de dados e Docker.
+
+## Lista dos diferenciais implementados
+
+- Organização e legibilidade do código.
+- Tratamento de erros com respostas personalizadas.
+- Implementação de um servidor HTTP estável com Waitress.
+- Separação lógica entre carregamento de dados e lógica de rotas.
+- Estrutura escalável para integração futura com Docker.
+- Leitura e manipulação de arquivos CSV sem dependência de banco de dados inicial.
+- API
