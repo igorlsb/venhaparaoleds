@@ -93,6 +93,7 @@ Aplicação em **Flask** que permite via API:
 
 ### Execução
 1. No Docker execute: `docker-compose up -d`.
+2. Executar no python: python application.py      
 2. Consultas:
    - Concursos: `http://localhost:5010/concursos/182.845.084-34`.
    - Candidatos: `http://localhost:5010/candidatos/61828450843`.
